@@ -38,7 +38,11 @@ jobs:
       - name: Build
         run: pnpm run build
         env:
-          VITE_LAUNCHDARKLY_CLIENT_ID: ${{ secrets.VITE_LAUNCHDARKLY_CLIENT_ID }}
+          VITE_LD_CLIENT_SIDE_ID: ${{ secrets.VITE_LD_CLIENT_SIDE_ID }}
+          VITE_user_pools_id: ${{ secrets.VITE_USER_POOLS_ID }}
+          VITE_user_pools_web_client_id: ${{ secrets.VITE_USER_POOLS_WEB_CLIENT_ID }}
+          VITE_local_user: ${{ secrets.VITE_LOCAL_USER }}
+          VITE_local_password: ${{ secrets.VITE_LOCAL_PASSWORD }}
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
