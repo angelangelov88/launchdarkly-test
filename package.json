@@ -8,8 +8,6 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@launchdarkly/observability": "^1.0.3",
